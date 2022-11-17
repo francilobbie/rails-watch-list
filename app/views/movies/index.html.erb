@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>All my movies</h1>
+    <p>
+      <ul>
+      <% @movies.each do |movie| %>
+        <li> <h2><%= link_to movie.title, movie_path(movie) %><img src="<%= movie.poster_url %>" alt="the movie image" class="w-10"></li>
+      <% end %>
+    </ul>
+  </p>
+</div>
